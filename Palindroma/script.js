@@ -19,15 +19,24 @@ function isPalindrome(word) {
     }
 }
 
+const buttonEvent = document.querySelector("#start");
 
-const userWord = prompt("Inserisci una parola");
+buttonEvent.addEventListener("click",
+    function () {
 
-if (isPalindrome(userWord)) {
+        const userWord = document.getElementById("word").value;
 
-    console.log(userWord + " E' palindroma ")
-} else if (!isNaN(userWord)) {
-    alert("La parola che hai inserito non è valida")
-}
-else {
-    console.log(userWord + " Non è palindroma ")
-}
+        if (userWord === "") {
+            document.getElementById("result").innerText = "Inserire una parola.";
+
+        } else if (!isNaN(userWord)) {
+            document.getElementById("result").innerText = "La parola non è valida.";
+
+        } else if (isPalindrome(userWord)) {
+            document.getElementById("result").innerText = "La parola " + userWord + " è palindroma.";
+
+        } else {
+            document.getElementById("result").innerText = "La parola " + userWord + " non è palindroma.";
+        }
+    }
+)
