@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Palindroma</title>
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <input id="word" type="text">
-    <button id="start">Start</button>
-    <div id="result"></div>
+    <div class="container">
 
-    <script src="./script.js"></script>
+        <div class="hero-container">
+            <div class="environment"></div>
+            <h2 class="hero glitch layers text-center" data-text="PALINDROMI"><span>PALINDROMI</span></h2>
+        </div>
+
+
+        <div class="d-flex justify-content-center align-items-center flex-column mt-3">
+            <div class="banner d-flex flex-column align-items-center justify-content-center rounded-5">
+                <div class="mb-3">Inserisci una parola</div>
+                <input id="word" type="text">
+                <div>
+                    <button class="button-49 mt-3" role="button" id="start"> Start </button>
+                </div>
+                <div id="result"></div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="./script.js"></script>
+
+        <script src="./script.js"></script>
 </body>
 
 </html>

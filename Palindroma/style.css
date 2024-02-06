@@ -2,9 +2,20 @@
     background-image: url(./img/wallpaperflare.com_wallpaper.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     height: 100vh;
     overflow: hidden;
 }
+
+
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.375);
+    width: 65%;
+    height: 350px;
+}
+
+
 
 .button-49,
 .button-49:after {
@@ -23,6 +34,9 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-49:after {
@@ -107,21 +121,26 @@
     }
 }
 
+@media (min-width: 576px) {
+    .banner {
+        max-width: 700px;
+    }
+}
+
 @media (min-width: 768px) {
 
     .button-49,
     .button-49:after {
-        width: 200px;
-        height: 86px;
+        width: 100px;
+        height: 56px;
         line-height: 88px;
+    }
+
+    .banner {
+        max-width: 900px;
     }
 }
 
-.banner {
-    background-color: rgba(0, 0, 0, 0.375);
-    width: 60%;
-    height: 350px;
-}
 
 
 
