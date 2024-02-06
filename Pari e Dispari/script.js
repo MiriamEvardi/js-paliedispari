@@ -27,23 +27,58 @@ function evenOdd(number) {
 
 }
 
-const userNumber = Number(prompt("Scegli un numero da 1 a 5"));
-const userChoice = prompt("Scegli tra Pari o Dispari");
 
-const computerNumber = randomNumber5()
-console.log(computerNumber)
 
-let result = sum(userNumber, computerNumber);
+let userNumber;
+let userChoice;
+const buttonEvent = document.querySelector("#start");
 
-let win = evenOdd(result);
 
-console.log(win)
+buttonEvent.addEventListener("click",
+    function () {
 
-console.log(result)
 
-if (userChoice === win) {
+        do {
 
-    console.log("Hai vinto");
-} else {
-    console.log("Hai perso")
-}
+            userNumber = Number(prompt("Scegli un numero da 1 a 5"));
+
+            if (isNaN(userNumber) || userNumber < 1 || userNumber > 5) {
+                alert("Numero inserito non valido");
+            }
+
+        } while (isNaN(userNumber) || userNumber < 1 || userNumber > 5);
+
+
+        do {
+            userChoice = prompt("Scegli tra Pari o Dispari");
+
+            if (userChoice !== "Pari" && userChoice !== "Dispari") {
+                alert("Parola non valida");
+            }
+
+        } while (userChoice !== "Pari" && userChoice !== "Dispari");
+
+
+        const computerNumber = randomNumber5()
+
+        let result = sum(userNumber, computerNumber);
+
+        let win = evenOdd(result);
+
+        document.getElementById("computer-number").innerText = "Il computer ha scelto: " + computerNumber;
+        document.getElementById("user-number").innerText = "Hai scelto: " + userNumber;
+
+
+
+
+        if (userChoice === win) {
+
+            document.getElementById("results").innerText = "Hai vinto!";
+        } else {
+            document.getElementById("results").innerText = "Hai perso!";
+        }
+
+
+        document.getElementById("sum").innerText = "La somma dei due numeri è:  " + result;
+    }
+)

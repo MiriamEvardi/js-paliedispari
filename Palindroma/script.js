@@ -4,8 +4,6 @@
 //farà i suoi calcoli per capire se è palindroma o meno e ci restituirà true o false in base all'esito)
 
 
-
-
 function isPalindrome(word) {
 
     for (let i = 0; i < Math.floor(word.length / 2); i++) {
@@ -27,6 +25,9 @@ const userWord = prompt("Inserisci una parola");
 if (isPalindrome(userWord)) {
 
     console.log(userWord + " E' palindroma ")
-} else {
+} else if (!isNaN(userWord)) {
+    alert("La parola che hai inserito non è valida")
+}
+else {
     console.log(userWord + " Non è palindroma ")
 }
